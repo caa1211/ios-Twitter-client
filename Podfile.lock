@@ -25,6 +25,7 @@ PODS:
     - AFNetworking/NSURLSession (~> 2.5.0)
   - FontAwesomeIconFactory (2.0)
   - HexColors (2.2.1)
+  - iOS-Slide-Menu (1.4.6)
   - TSMessages (0.9.12):
     - HexColors
   - UIScrollView-InfiniteScroll (0.7.2)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - AFNetworking
   - BDBOAuth1Manager
   - FontAwesomeIconFactory
+  - iOS-Slide-Menu
   - TSMessages
   - UIScrollView-InfiniteScroll
 
@@ -41,6 +43,7 @@ SPEC CHECKSUMS:
   BDBOAuth1Manager: 2e28773b58f880fb36b5cd3efcf0b1fefbc78a99
   FontAwesomeIconFactory: d161a1832f8220d764033e0fcc4f4a8388495ab7
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
+  iOS-Slide-Menu: 3a8b157f87694fce888899f169e05b433575ff90
   TSMessages: 2a52642128d7ab15b46930c810b9c9403a2b58f3
   UIScrollView-InfiniteScroll: cfa860f96f5a2e3b4575d59fe6d08d337093ac2a
 

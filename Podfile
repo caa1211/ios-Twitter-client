@@ -7,6 +7,7 @@ target 'ios-Twitter' do
     pod "AFNetworking"
     pod "UIScrollView-InfiniteScroll"
     pod "TSMessages"
+    pod "iOS-Slide-Menu"
 end
 
 target 'ios-TwitterTests' do

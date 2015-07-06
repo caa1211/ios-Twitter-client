@@ -78,3 +78,9 @@
 #define COCOAPODS_VERSION_MINOR_UIScrollView_InfiniteScroll 7
 #define COCOAPODS_VERSION_PATCH_UIScrollView_InfiniteScroll 2
 
+// iOS-Slide-Menu
+#define COCOAPODS_POD_AVAILABLE_iOS_Slide_Menu
+#define COCOAPODS_VERSION_MAJOR_iOS_Slide_Menu 1
+#define COCOAPODS_VERSION_MINOR_iOS_Slide_Menu 4
+#define COCOAPODS_VERSION_PATCH_iOS_Slide_Menu 6
+

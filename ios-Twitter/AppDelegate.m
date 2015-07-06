@@ -12,6 +12,8 @@
 #import "User.h"
 #import "Tweet.h"
 #import "TweetsViewController.h"
+#import "SlideNavigationController.h"
+#import "MenuViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,20 +30,25 @@
     User *user = [User currentUser];
     if (user != nil) {
         NSLog(@"welcome: %@", user.name);
-        self.window.rootViewController = [[UINavigationController alloc]
+        self.window.rootViewController = [[SlideNavigationController alloc]
     initWithRootViewController: [[TweetsViewController alloc] initWithUser:user]];
+        
+        MenuViewController *leftMenu = [[MenuViewController alloc] init];
+        [SlideNavigationController sharedInstance].leftMenu = leftMenu;
+        
     }else {
         NSLog(@"No logged in");
         self.window.rootViewController = [[LoginViewController alloc]init];
+        //self.window.rootViewController = [[SlideNavigationController alloc] initWithRootViewController: [[LoginViewController alloc]init]];
     }
-
+    
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 
 -(void) userDidLogout{
     self.window.rootViewController = [[LoginViewController alloc]init];
-    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

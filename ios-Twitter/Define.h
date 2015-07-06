@@ -10,6 +10,12 @@
 #import "NIKFontAwesomeIconFactory.h"
 #import "NIKFontAwesomeIconFactory+iOS.h"
 
+#import "SlideNavigationController.h"
+#import "MenuViewController.h"
+#import "TweetsViewController.h"
+#import "ProfileViewController.h"
+#import "MentionsController.h"
+
 extern NSString * const PostNewTweetNotification;
 extern NSString * const UpdateTweetNotification;
 extern NSString * const DestroyTweetNotification;

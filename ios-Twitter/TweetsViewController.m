@@ -15,8 +15,10 @@
 #import <TSMessage.h>
 #import "ComposeTweetViewController.h"
 #import "TweetDetailViewController.h"
+#import "SlideNavigationController.h"
+#import "MenuViewController.h"
 
-@interface TweetsViewController () <UITableViewDataSource, UITableViewDelegate, TweetCellDelegate>
+@interface TweetsViewController () <UITableViewDataSource, UITableViewDelegate, TweetCellDelegate, SlideNavigationControllerDelegate>
 
 //@property (nonatomic, strong) UINavigationController *naviController;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -65,22 +67,33 @@ enum {
     self.tableView.dataSource = self;
 
     self.title = @"Home";
-
+ 
+    // Menu button
+    UIImage *menuImg = [Define fontImage:NIKFontAwesomeIconBars rgbaValue:0xffffff];
+    UIBarButtonItem *menuBtn = [[UIBarButtonItem alloc] initWithImage:menuImg style:UIBarButtonItemStylePlain target:[SlideNavigationController sharedInstance] action:@selector(toggleLeftMenu)];
+    [SlideNavigationController sharedInstance].leftBarButtonItem = menuBtn;
     
-//    UIBarButtonItem *logoutBtn = [[UIBarButtonItem alloc] initWithTitle:@"Sign Out" style:UIBarButtonItemStylePlain target:self action:@selector(onLogout)];
-//    [logoutBtn setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor whiteColor] } forState:UIControlStateNormal];
-//    
-//    UIBarButtonItem *newBtn = [[UIBarButtonItem alloc] initWithTitle:@"New" style:UIBarButtonItemStylePlain target:self action:@selector(onNew)];
-//    [newBtn setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor whiteColor] } forState:UIControlStateNormal];
-    
-    UIImage *logoutImg = [Define fontImage:NIKFontAwesomeIconUserTimes rgbaValue:0xffffff];
-    UIBarButtonItem *logoutBtn = [[UIBarButtonItem alloc] initWithImage:logoutImg style:UIBarButtonItemStylePlain target:self action:@selector(onLogout)];
-    
+    // Compose tweet button
     UIImage *newImg = [Define fontImage:NIKFontAwesomeIconPencilSquareO rgbaValue:0xffffff];
     UIBarButtonItem *newBtn = [[UIBarButtonItem alloc] initWithImage:newImg style:UIBarButtonItemStylePlain target:self action:@selector(onNew)];
-    
-    self.navigationItem.leftBarButtonItem = logoutBtn;
+   
     self.navigationItem.rightBarButtonItem = newBtn;
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidClose object:nil queue:nil usingBlock:^(NSNotification *note) {
+        NSString *menu = note.userInfo[@"menu"];
+        NSLog(@"Closed %@", menu);
+    }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidOpen object:nil queue:nil usingBlock:^(NSNotification *note) {
+        NSString *menu = note.userInfo[@"menu"];
+        NSLog(@"Opened %@", menu);
+    }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidReveal object:nil queue:nil usingBlock:^(NSNotification *note) {
+        NSString *menu = note.userInfo[@"menu"];
+        NSLog(@"Revealed %@", menu);
+    }];
+    
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     [self.navigationController.navigationBar setBarTintColor:[[UIColor alloc] initWithRed:0.298 green:0.646 blue:0.920 alpha:1.000]];
@@ -93,6 +106,7 @@ enum {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onDestroyTweet:) name:DestroyTweetNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPostNewTweet:) name:PostNewTweetNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onUpdateTweet:) name:UpdateTweetNotification object:nil];
+       
 }
 
 - (void) initInfiniteScroll {
@@ -327,5 +341,17 @@ enum {
 
     NSLog(@"onUpdateTweet %@", tweet.user.name);
 }
+
+
+- (BOOL)slideNavigationControllerShouldDisplayLeftMenu
+{
+    return YES;
+}
+
+- (BOOL)slideNavigationControllerShouldDisplayRightMenu
+{
+    return NO;
+}
+
 
 @end

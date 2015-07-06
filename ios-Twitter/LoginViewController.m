@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "TwitterClient.h"
 #import "TweetsViewController.h"
+#import "SlideNavigationController.h"
+#import "MenuViewController.h"
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *twitterIcon;
@@ -22,10 +24,17 @@
         if (user != nil) {
             NSLog(@"User %@ loggin", user.name);
             [User setCurrentUser:user];
-            //[self presentViewController: [[TweetsViewController alloc] init] animated:YES completion:nil];
-            [self presentViewController: [[UINavigationController alloc]
-                                          initWithRootViewController: [[TweetsViewController alloc] initWithUser:user]] animated:YES completion:nil];
+ 
+            NSLog(@"welcome: %@", user.name);
+
+            UIViewController *nvc = [[SlideNavigationController alloc]
+                                              initWithRootViewController: [[TweetsViewController alloc] initWithUser:user]];
             
+            MenuViewController *leftMenu = [[MenuViewController alloc] init];
+            [SlideNavigationController sharedInstance].leftMenu = leftMenu;
+            
+            [self presentViewController: nvc animated:YES completion:nil];
+    
         }else {
             // Present error view;
         }

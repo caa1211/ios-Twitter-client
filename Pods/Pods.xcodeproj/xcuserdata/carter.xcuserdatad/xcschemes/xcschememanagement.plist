@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-ios-Twitter-iOS-Slide-Menu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ios-Twitter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B082CD4A74CD988C0A18476</key>
+		<key>17FBBCB1770FB13FDF07B757</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0E8EC91461237571FE9EACAB</key>
+		<key>1BDF17A8B15EF9F298A03549</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>268617309339069C51F6FB45</key>
+		<key>2BD374959B1ED5299FB23E4A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4608084A313FF40AADB03E28</key>
+		<key>2E6EF8BDA56414E1ECF81D34</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>925E812840E998BF37C03C83</key>
+		<key>3610D8DC5F3CD00FE9294C6D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E6FD52CD291A4F1333140E98</key>
+		<key>7DDA9551FC01934AB7007AFE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EE4ABE3B30D278C9D0D31EDA</key>
+		<key>994DE31C2DEBCB9ADC0F5A7D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B6852BB1992A3199837C48E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

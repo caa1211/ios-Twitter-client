@@ -76,6 +76,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "TSMessages/Pod/Assets/NotificationButtonBackground.png"
   install_resource "TSMessages/Pod/Assets/NotificationButtonBackground@2x.png"
   install_resource "TSMessages/Pod/Assets/TSMessagesDefaultDesign.json"
+  install_resource "iOS-Slide-Menu/SlideMenu/Source/Assets/menu-button.png"
+  install_resource "iOS-Slide-Menu/SlideMenu/Source/Assets/menu-button@2x.png"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "FontAwesomeIconFactory/Font-Awesome/fonts/FontAwesome.otf"
@@ -96,6 +98,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "TSMessages/Pod/Assets/NotificationButtonBackground.png"
   install_resource "TSMessages/Pod/Assets/NotificationButtonBackground@2x.png"
   install_resource "TSMessages/Pod/Assets/TSMessagesDefaultDesign.json"
+  install_resource "iOS-Slide-Menu/SlideMenu/Source/Assets/menu-button.png"
+  install_resource "iOS-Slide-Menu/SlideMenu/Source/Assets/menu-button@2x.png"
 fi
 
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
