@@ -29,8 +29,3 @@ Time spent: `<Number of hours spent>`
 ### Walkthrough
 
 ![Video Walkthrough](preview.gif)
-# ios-Twitter-client
-# ios-Twitter-client
-# ios-Twitter-client
-# ios-Twitter-client
-# ios-Twitter-client
