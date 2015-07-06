@@ -8,7 +8,7 @@
 
 #import "MentionsController.h"
 
-@interface MentionsController ()
+@interface MentionsController () <SlideNavigationControllerDelegate>
 
 @end
 
@@ -17,7 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Mentions";
-    // Do any additional setup after loading the view from its nib.
+    
+    UIImage *menuImg = [Define fontImage:NIKFontAwesomeIconBars rgbaValue:0xffffff];
+    UIBarButtonItem *menuBtn = [[UIBarButtonItem alloc] initWithImage:menuImg style:UIBarButtonItemStylePlain target:[SlideNavigationController sharedInstance] action:@selector(toggleLeftMenu)];
+    
+    [SlideNavigationController sharedInstance].leftBarButtonItem = menuBtn;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,14 +29,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (BOOL)slideNavigationControllerShouldDisplayLeftMenu
+{
+    return YES;
 }
-*/
+
+- (BOOL)slideNavigationControllerShouldDisplayRightMenu
+{
+    return NO;
+}
 
 @end

@@ -11,7 +11,7 @@
 #import "TweetsViewController.h"
 #import "SlideNavigationController.h"
 #import "MenuViewController.h"
-@interface LoginViewController ()
+@interface LoginViewController () <SlideNavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *twitterIcon;
 @property (strong, nonatomic) CABasicAnimation *fade;
@@ -24,17 +24,10 @@
         if (user != nil) {
             NSLog(@"User %@ loggin", user.name);
             [User setCurrentUser:user];
- 
-            NSLog(@"welcome: %@", user.name);
 
-            UIViewController *nvc = [[SlideNavigationController alloc]
-                                              initWithRootViewController: [[TweetsViewController alloc] initWithUser:user]];
-            
-            MenuViewController *leftMenu = [[MenuViewController alloc] init];
-            [SlideNavigationController sharedInstance].leftMenu = leftMenu;
-            
-            [self presentViewController: nvc animated:YES completion:nil];
-    
+            [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:[[TweetsViewController alloc] initWithUser:user]
+                                                                     withSlideOutAnimation:NO
+                                                                     andCompletion:nil];
         }else {
             // Present error view;
         }
@@ -74,6 +67,10 @@
     [super viewDidLoad];
     [self loadBackgroundImage];
     
+    self.title = @"";
+    
+    [[SlideNavigationController sharedInstance] setNavigationBarHidden:YES];
+    
     self.twitterIcon.image = [UIImage imageNamed:@"Twitter_logo_blue_48.png" ];
 
     self.fade = [CABasicAnimation animationWithKeyPath:@"opacity"];
@@ -99,5 +96,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (BOOL)slideNavigationControllerShouldDisplayLeftMenu
+{
+    return NO;
+}
+
+- (BOOL)slideNavigationControllerShouldDisplayRightMenu
+{
+    return NO;
+}
+
 
 @end

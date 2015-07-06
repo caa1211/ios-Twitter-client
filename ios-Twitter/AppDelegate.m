@@ -28,27 +28,32 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidLogout) name:UserDidLogoutNotification object:nil];
     
     User *user = [User currentUser];
+    self.window.rootViewController = [[SlideNavigationController alloc] init];
+    UIViewController *vc ;
     if (user != nil) {
-        NSLog(@"welcome: %@", user.name);
-        self.window.rootViewController = [[SlideNavigationController alloc]
-    initWithRootViewController: [[TweetsViewController alloc] initWithUser:user]];
-        
-        MenuViewController *leftMenu = [[MenuViewController alloc] init];
-        [SlideNavigationController sharedInstance].leftMenu = leftMenu;
-        
+       vc = [[TweetsViewController alloc] initWithUser:user];
     }else {
-        NSLog(@"No logged in");
-        self.window.rootViewController = [[LoginViewController alloc]init];
-        //self.window.rootViewController = [[SlideNavigationController alloc] initWithRootViewController: [[LoginViewController alloc]init]];
+       NSLog(@"No logged in");
+       vc = [[LoginViewController alloc]init];
     }
     
+    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
+                                                             withSlideOutAnimation:NO
+                                                                     andCompletion:nil];
+    
+    MenuViewController *leftMenu = [[MenuViewController alloc] init];
+    [SlideNavigationController sharedInstance].leftMenu = leftMenu;
+
     [self.window makeKeyAndVisible];
 
     return YES;
 }
 
 -(void) userDidLogout{
-    self.window.rootViewController = [[LoginViewController alloc]init];
+    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:[[LoginViewController alloc]init]
+                                                             withSlideOutAnimation:NO
+                                                                     andCompletion:nil];
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

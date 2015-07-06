@@ -68,6 +68,8 @@ enum {
 
     self.title = @"Home";
  
+    [[SlideNavigationController sharedInstance] setNavigationBarHidden:NO animated:YES];
+    
     // Menu button
     UIImage *menuImg = [Define fontImage:NIKFontAwesomeIconBars rgbaValue:0xffffff];
     UIBarButtonItem *menuBtn = [[UIBarButtonItem alloc] initWithImage:menuImg style:UIBarButtonItemStylePlain target:[SlideNavigationController sharedInstance] action:@selector(toggleLeftMenu)];
