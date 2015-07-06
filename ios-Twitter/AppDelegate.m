@@ -11,9 +11,7 @@
 #import "TwitterClient.h"
 #import "User.h"
 #import "Tweet.h"
-#import "TweetsViewController.h"
-#import "SlideNavigationController.h"
-#import "MenuViewController.h"
+#import "Define.h"
 
 @interface AppDelegate ()
 
@@ -31,7 +29,8 @@
     self.window.rootViewController = [[SlideNavigationController alloc] init];
     UIViewController *vc ;
     if (user != nil) {
-       vc = [[TweetsViewController alloc] initWithUser:user];
+       //vc = [[TweetsViewController alloc] initWithUser:user];
+       vc = [[ProfileViewController alloc] initWithUser:user];
     }else {
        NSLog(@"No logged in");
        vc = [[LoginViewController alloc]init];
@@ -41,7 +40,7 @@
                                                              withSlideOutAnimation:NO
                                                                      andCompletion:nil];
     
-    MenuViewController *leftMenu = [[MenuViewController alloc] init];
+    MenuViewController *leftMenu = [[MenuViewController alloc] initWithUser:user];
     [SlideNavigationController sharedInstance].leftMenu = leftMenu;
 
     [self.window makeKeyAndVisible];

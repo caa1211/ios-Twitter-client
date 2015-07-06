@@ -9,8 +9,9 @@
 #import "MenuViewController.h"
 
 @interface MenuViewController ()  <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UIView *headView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (strong, nonatomic) User *loginUser;
 @end
 
 typedef NS_ENUM(NSInteger, MenuItem) {
@@ -23,11 +24,20 @@ typedef NS_ENUM(NSInteger, MenuItem) {
 @implementation MenuViewController
 
 
+- (id) initWithUser: (User *)user{
+    self = [super init];
+    if (self) {
+        self.loginUser = user;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"DefaultCell"];
+    [self.headView setBackgroundColor:[[UIColor alloc] initWithRed:0.298 green:0.646 blue:0.920 alpha:1.000]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,13 +50,13 @@ typedef NS_ENUM(NSInteger, MenuItem) {
     
     switch (indexPath.row) {
         case Profile:
-            vc = [[ProfileViewController alloc]init];
+            vc = [[ProfileViewController alloc] initWithUser:self.loginUser];
             break;
         case Timeline:
-            vc = [[TweetsViewController alloc]init];
+            vc = [[TweetsViewController alloc] initWithUser:self.loginUser];
             break;
         case Mentions:
-            vc = [[MentionsController alloc]init];
+            vc = [[MentionsController alloc] initWithUser:self.loginUser];
             break;
         case Logout:
             [User logout];

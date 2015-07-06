@@ -72,7 +72,16 @@ enum {
     tapped.numberOfTapsRequired = 1;
     [self.favoriteBtn addGestureRecognizer:tapped];
     
+    tapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onUserClick)];
+    tapped.numberOfTapsRequired = 1;
+    [self.profileImage addGestureRecognizer:tapped];
 }
+
+-(void) onUserClick {
+    // Delegate tap to TweetsViewController, and than it will lunch ComposeTweetView.
+    [self.delegate didUserSelected:self.tweet.user];
+}
+
 
 -(void) onReply {
     // Delegate tap to TweetsViewController, and than it will lunch ComposeTweetView.

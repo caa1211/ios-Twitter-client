@@ -13,6 +13,7 @@
 
 @protocol TweetCellDelegate <NSObject>
 -(void) didTapCellReply: (Tweet *) tweet;
+-(void) didUserSelected: (User *) user;
 @end
 
 @interface TweetCell : UITableViewCell

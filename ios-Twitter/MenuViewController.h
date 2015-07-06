@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Define.h"
+#import "User.h"
 
 @interface MenuViewController : UIViewController 
-    
+    -(id) initWithUser:(User*)user;
 @end

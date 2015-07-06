@@ -103,7 +103,7 @@
                             </mask>
                         </variation>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="irj-XJ-vfF">
+                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="irj-XJ-vfF">
                         <rect key="frame" x="8" y="11" width="60" height="60"/>
                         <color key="backgroundColor" red="0.035294117649999998" green="0.53725490200000003" blue="0.72941176470000002" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -147,11 +147,11 @@
                     <mask key="constraints">
                         <exclude reference="Qse-zx-OS6"/>
                         <exclude reference="fBC-LM-MRY"/>
-                        <exclude reference="8j5-Kn-frY"/>
-                        <exclude reference="Ott-CX-jDE"/>
                         <exclude reference="5C3-oa-IVU"/>
                         <exclude reference="Xp9-EJ-OVg"/>
                         <exclude reference="Z7N-fL-PuZ"/>
+                        <exclude reference="8j5-Kn-frY"/>
+                        <exclude reference="Ott-CX-jDE"/>
                         <exclude reference="EYJ-ad-det"/>
                         <exclude reference="W0e-Wc-p6E"/>
                     </mask>

@@ -15,6 +15,7 @@
 #import "TweetsViewController.h"
 #import "ProfileViewController.h"
 #import "MentionsController.h"
+#import <UIImageView+AFNetworking.h>
 
 extern NSString * const PostNewTweetNotification;
 extern NSString * const UpdateTweetNotification;

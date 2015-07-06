@@ -104,7 +104,6 @@ enum {
     [self initRefreshControl];
     [self initInfiniteScroll];
     
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onDestroyTweet:) name:DestroyTweetNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPostNewTweet:) name:PostNewTweetNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onUpdateTweet:) name:UpdateTweetNotification object:nil];
@@ -258,6 +257,13 @@ enum {
             return @"Timeline";
             break;
     }
+}
+
+- (void) didUserSelected: (User *) user {
+    ProfileViewController *vc = [[ProfileViewController alloc]initWithUser:user andLoginUser: self.loginUser];
+    UINavigationController *nvController = [[UINavigationController alloc]
+                                            initWithRootViewController: vc];
+    [self presentViewController:nvController animated:YES completion:nil];
 }
 
 - (void)didTapCellReply:(Tweet *)tweet

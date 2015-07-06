@@ -9,10 +9,18 @@
 #import "MentionsController.h"
 
 @interface MentionsController () <SlideNavigationControllerDelegate>
-
+@property (strong, nonatomic) User *loginUser;
 @end
 
 @implementation MentionsController
+
+- (id) initWithUser: (User *)user{
+    self = [super init];
+    if (self) {
+        self.loginUser = user;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

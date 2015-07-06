@@ -10,7 +10,7 @@
 #import "TwitterClient.h"
 #import "TweetsViewController.h"
 #import "SlideNavigationController.h"
-#import "MenuViewController.h"
+
 @interface LoginViewController () <SlideNavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *twitterIcon;
