@@ -40,6 +40,8 @@
                                                              withSlideOutAnimation:NO
                                                                      andCompletion:nil];
     
+    [SlideNavigationController sharedInstance].avoidSwitchingToSameClassViewController = NO;
+    
     MenuViewController *leftMenu = [[MenuViewController alloc] initWithUser:user];
     [SlideNavigationController sharedInstance].leftMenu = leftMenu;
 

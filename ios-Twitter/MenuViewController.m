@@ -8,18 +8,20 @@
 
 #import "MenuViewController.h"
 
-@interface MenuViewController ()  <UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UIView *headView;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) User *loginUser;
-@end
-
 typedef NS_ENUM(NSInteger, MenuItem) {
     Profile,
     Timeline,
     Mentions,
     Logout
 };
+
+@interface MenuViewController ()  <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UIView *headView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) User *loginUser;
+@property (assign, nonatomic) MenuItem cuttentMenuItem;
+@end
+
 
 @implementation MenuViewController
 
@@ -48,15 +50,22 @@ typedef NS_ENUM(NSInteger, MenuItem) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *vc = nil;
     
+    if (_cuttentMenuItem == indexPath.row) {
+        [[SlideNavigationController sharedInstance] toggleLeftMenu];
+        return;
+    }
+    
+   _cuttentMenuItem = indexPath.row;
+    
     switch (indexPath.row) {
         case Profile:
             vc = [[ProfileViewController alloc] initWithUser:self.loginUser];
             break;
         case Timeline:
-            vc = [[TweetsViewController alloc] initWithUser:self.loginUser];
+            vc = [[TweetsViewController alloc] initWithUser:self.loginUser andTimelineType:TIMELINE_TYPE_HOME];
             break;
         case Mentions:
-            vc = [[MentionsController alloc] initWithUser:self.loginUser];
+            vc = [[TweetsViewController alloc] initWithUser:self.loginUser andTimelineType:TIMELINE_TYPE_MENTIONS];
             break;
         case Logout:
             [User logout];
@@ -68,7 +77,6 @@ typedef NS_ENUM(NSInteger, MenuItem) {
     [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
                                                              withSlideOutAnimation:NO
                                                                      andCompletion:nil];
-    
 }
 
 

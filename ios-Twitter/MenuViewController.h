@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Define.h"
 #import "User.h"
+#import "TweetsViewController.h"
 
 @interface MenuViewController : UIViewController 
     -(id) initWithUser:(User*)user;

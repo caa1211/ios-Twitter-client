@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Define.h"
+
+
 @interface MentionsController : UIViewController
-    -(id) initWithUser:(User*)user;
+- (id) initWithUser:(User*)user;
+
 @end

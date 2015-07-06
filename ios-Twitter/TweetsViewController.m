@@ -18,6 +18,7 @@
 #import "SlideNavigationController.h"
 #import "MenuViewController.h"
 
+
 @interface TweetsViewController () <UITableViewDataSource, UITableViewDelegate, TweetCellDelegate, SlideNavigationControllerDelegate>
 
 //@property (nonatomic, strong) UINavigationController *naviController;
@@ -25,6 +26,7 @@
 @property (strong, nonatomic) NSMutableArray *tweets;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) User *loginUser;
+@property (assign, nonatomic) TIMELINE_TYPE timelineType;
 @end
 
 enum {
@@ -40,18 +42,39 @@ enum {
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
-- (id) initWithUser: (User *)user{
+- (id) initWithUser: (User *)user andTimelineType:(TIMELINE_TYPE)type {
     self = [super init];
     if (self) {
         self.loginUser = user;
+        self.timelineType = type;
     }
     return self;
 }
 
+- (id) initWithUser: (User *)user{
+    self = [super init];
+    if (self) {
+        self.loginUser = user;
+        self.timelineType = TIMELINE_TYPE_HOME;
+    }
+    return self;
+}
+
+- (NSString *) pageTitle {
+    if (self.timelineType == TIMELINE_TYPE_HOME) {
+        return @"Home";
+    }else if (self.timelineType == TIMELINE_TYPE_MENTIONS){
+        return @"Mentions";
+    }else {
+        return @"";
+    }
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[TwitterClient sharedInstance] homeTimelineWithParams:nil completion:^(NSArray *tweets, NSError *error) {
+    [[TwitterClient sharedInstance] homeTimelineWithParams:nil timelineType: self.timelineType completion:^(NSArray *tweets, NSError *error) {
         if (tweets == nil){
             NSString *errorMsg =  error.userInfo[@"NSLocalizedDescription"];
             [TSMessage showNotificationWithTitle:@"Newtork Error"
@@ -66,7 +89,7 @@ enum {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
-    self.title = @"Home";
+    self.title = [self pageTitle];
  
     [[SlideNavigationController sharedInstance] setNavigationBarHidden:NO animated:YES];
     
@@ -122,7 +145,7 @@ enum {
     NSString *lastTweetIdStr = ((Tweet *)[self.tweets lastObject]).idStr;
     long long maxIdToLoad = [lastTweetIdStr longLongValue] - 1;
     
-    [[TwitterClient sharedInstance] homeTimelineWithParams:@{@"max_id": [@(maxIdToLoad) stringValue]} completion:^(NSArray *tweets, NSError *error) {
+    [[TwitterClient sharedInstance] homeTimelineWithParams:@{@"max_id": [@(maxIdToLoad) stringValue]} timelineType: self.timelineType completion:^(NSArray *tweets, NSError *error) {
 
         if (tweets.count > 0) {
             NSInteger cNumTweets = self.tweets.count;
@@ -151,7 +174,7 @@ enum {
 }
 
 - (void)refreshData{
-    [[TwitterClient sharedInstance] homeTimelineWithParams:nil completion:^(NSArray *tweets, NSError *error) {
+    [[TwitterClient sharedInstance] homeTimelineWithParams:nil timelineType: self.timelineType completion:^(NSArray *tweets, NSError *error) {
         if (tweets!=nil) {
             [self.tweets removeAllObjects];
             [self.tweets addObjectsFromArray:tweets];

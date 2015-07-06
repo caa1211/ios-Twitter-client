@@ -9,12 +9,16 @@
 #import "BDBOAuth1RequestOperationManager.h"
 #import "User.h"
 #import "Tweet.h"
+#import "Define.h"
 
 @interface TwitterClient : BDBOAuth1RequestOperationManager
 + (TwitterClient *) sharedInstance;
 -(void) loginWithCompletion: (void(^)(User *user, NSError *error))completion;
 -(void)openUrl:(NSURL *)url;
 -(void) homeTimelineWithParams:(NSDictionary *)params completion:(void(^)(NSArray *tweets, NSError *error))completion;
+
+-(void) homeTimelineWithParams:(NSDictionary *)params timelineType:(TIMELINE_TYPE)timelineType completion:(void(^)(NSArray *tweets, NSError *error))completion;
+
 -(void) postTweet:(NSString *)text completion: (void(^)(Tweet *tweet, NSError *error))completion;
 -(void) postRetweet:(NSString *)idStr completion: (void(^)(Tweet *tweet, NSError *error))completion;
 -(void) postDestroy:(NSString *)idStr completion: (void(^)(Tweet *tweet, NSError *error))completion;
