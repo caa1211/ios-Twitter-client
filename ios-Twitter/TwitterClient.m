@@ -87,9 +87,12 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
 
 -(void) homeTimelineWithParams:(NSDictionary *)params timelineType:(TIMELINE_TYPE)timelineType completion:(void(^)(NSArray *tweets, NSError *error))completion {
     if (timelineType == TIMELINE_TYPE_HOME) {
-        [self homeTimelineWithParams:params completion:completion];
-    }else{
-        [self mentionslineWithParams:params completion:completion];
+       [self homeTimelineWithParams:params completion:completion];
+    }else if (timelineType == TIMELINE_TYPE_MENTIONS){
+       [self mentionslineWithParams:params completion:completion];
+    }else {
+        NSLog(@"===========homeTimelineWithParams failed================");
+        completion(nil, [[NSError alloc] initWithCoder:[[NSCoder alloc] init]]);
     }
 }
 

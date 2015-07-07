@@ -40,6 +40,7 @@ typedef NS_ENUM(NSInteger, MenuItem) {
     self.tableView.delegate = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"DefaultCell"];
     [self.headView setBackgroundColor:[[UIColor alloc] initWithRed:0.298 green:0.646 blue:0.920 alpha:1.000]];
+    _cuttentMenuItem = Timeline;
 }
 
 - (void)didReceiveMemoryWarning {

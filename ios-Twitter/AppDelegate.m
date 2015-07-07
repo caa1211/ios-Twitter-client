@@ -29,8 +29,8 @@
     self.window.rootViewController = [[SlideNavigationController alloc] init];
     UIViewController *vc ;
     if (user != nil) {
-       //vc = [[TweetsViewController alloc] initWithUser:user];
-       vc = [[ProfileViewController alloc] initWithUser:user];
+       vc = [[TweetsViewController alloc] initWithUser:user];
+       //vc = [[ProfileViewController alloc] initWithUser:user];
     }else {
        NSLog(@"No logged in");
        vc = [[LoginViewController alloc]init];
