@@ -14,6 +14,7 @@
 #import "MenuViewController.h"
 #import "TweetsViewController.h"
 #import "ProfileViewController.h"
+#import "ProfileViewController2.h"
 #import "MentionsController.h"
 #import <UIImageView+AFNetworking.h>
 

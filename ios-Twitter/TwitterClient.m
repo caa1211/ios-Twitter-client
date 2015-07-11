@@ -96,6 +96,25 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
     }
 }
 
+-(void) userTimelineWithParams:(NSDictionary *)params completion:(void(^)(NSArray *tweets, NSError *error))completion {
+    [self GET:@"/1.1/statuses/user_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *tweets = [Tweet tweetsWithArray:responseObject];
+        completion(tweets, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+}
+
+-(void) userProfileBannerWithParam:(NSDictionary *)params completion:(void(^)(NSDictionary *images, NSError *error))completion {
+    [self GET:@"/1.1/users/profile_banner.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *images = responseObject;
+        completion(images, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+}
+
+
 -(void) postTweet:(NSString *)text completion: (void(^)(Tweet *tweet, NSError *error))completion{
     [self POST:@"1.1/statuses/update.json" parameters:@{@"status": text} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         Tweet *tweet = [[Tweet alloc]initWithDictionary:responseObject];

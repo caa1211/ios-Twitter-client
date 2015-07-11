@@ -26,6 +26,12 @@
 		AD3B527F1B51437600D04144 /* bg4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD3B52791B51437600D04144 /* bg4.jpg */; };
 		AD3B52801B51437600D04144 /* bg5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD3B527A1B51437600D04144 /* bg5.jpg */; };
 		AD3B52811B51437600D04144 /* bg6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD3B527B1B51437600D04144 /* bg6.jpg */; };
+		AD3B52851B516A9300D04144 /* ProfileViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3B52831B516A9300D04144 /* ProfileViewController2.m */; };
+		AD3B52861B516A9300D04144 /* ProfileViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3B52841B516A9300D04144 /* ProfileViewController2.xib */; };
+		AD3B528D1B516B2400D04144 /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3B528B1B516B2400D04144 /* ProfileCell.m */; };
+		AD3B528E1B516B2400D04144 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3B528C1B516B2400D04144 /* ProfileCell.xib */; };
+		AD3B52951B51781900D04144 /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3B52931B51781900D04144 /* StatusCell.m */; };
+		AD3B52961B51781900D04144 /* StatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3B52941B51781900D04144 /* StatusCell.xib */; };
 		AD7906911B4060B7008D470C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7906901B4060B7008D470C /* main.m */; };
 		AD7906941B4060B7008D470C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7906931B4060B7008D470C /* AppDelegate.m */; };
 		AD79069C1B4060B7008D470C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD79069B1B4060B7008D470C /* Images.xcassets */; };
@@ -93,6 +99,15 @@
 		AD3B52791B51437600D04144 /* bg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg4.jpg; sourceTree = "<group>"; };
 		AD3B527A1B51437600D04144 /* bg5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg5.jpg; sourceTree = "<group>"; };
 		AD3B527B1B51437600D04144 /* bg6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg6.jpg; sourceTree = "<group>"; };
+		AD3B52821B516A9300D04144 /* ProfileViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController2.h; sourceTree = "<group>"; };
+		AD3B52831B516A9300D04144 /* ProfileViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController2.m; sourceTree = "<group>"; };
+		AD3B52841B516A9300D04144 /* ProfileViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController2.xib; sourceTree = "<group>"; };
+		AD3B528A1B516B2400D04144 /* ProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCell.h; sourceTree = "<group>"; };
+		AD3B528B1B516B2400D04144 /* ProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCell.m; sourceTree = "<group>"; };
+		AD3B528C1B516B2400D04144 /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		AD3B52921B51781900D04144 /* StatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusCell.h; sourceTree = "<group>"; };
+		AD3B52931B51781900D04144 /* StatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusCell.m; sourceTree = "<group>"; };
+		AD3B52941B51781900D04144 /* StatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusCell.xib; sourceTree = "<group>"; };
 		AD79068B1B4060B7008D470C /* ios-Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-Twitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD79068F1B4060B7008D470C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7906901B4060B7008D470C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -243,6 +258,12 @@
 				ADDBBF201B41463F004EA24E /* TweetCell.h */,
 				ADDBBF211B41463F004EA24E /* TweetCell.m */,
 				ADDBBF221B41463F004EA24E /* TweetCell.xib */,
+				AD3B528A1B516B2400D04144 /* ProfileCell.h */,
+				AD3B528B1B516B2400D04144 /* ProfileCell.m */,
+				AD3B528C1B516B2400D04144 /* ProfileCell.xib */,
+				AD3B52921B51781900D04144 /* StatusCell.h */,
+				AD3B52931B51781900D04144 /* StatusCell.m */,
+				AD3B52941B51781900D04144 /* StatusCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -271,6 +292,9 @@
 				AD1CE2201B4AEB7C00C0F10D /* MentionsController.h */,
 				AD1CE2211B4AEB7C00C0F10D /* MentionsController.m */,
 				AD1CE2221B4AEB7C00C0F10D /* MentionsController.xib */,
+				AD3B52821B516A9300D04144 /* ProfileViewController2.h */,
+				AD3B52831B516A9300D04144 /* ProfileViewController2.m */,
+				AD3B52841B516A9300D04144 /* ProfileViewController2.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -401,12 +425,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3B52861B516A9300D04144 /* ProfileViewController2.xib in Resources */,
 				ADDBBF3E1B414CED004EA24E /* Twitter_logo_blue_48.png in Resources */,
 				AD3B527D1B51437600D04144 /* bg2.jpg in Resources */,
 				ADDBBF1B1B40A8A1004EA24E /* TweetsViewController.xib in Resources */,
 				AD3B527E1B51437600D04144 /* bg3.jpg in Resources */,
 				ADDBBF3C1B414CED004EA24E /* Twitter_logo_blue_16.png in Resources */,
 				ADDBBF381B414CED004EA24E /* reply_hover.png in Resources */,
+				AD3B52961B51781900D04144 /* StatusCell.xib in Resources */,
 				ADDBBF411B414CED004EA24E /* Twitter_logo_white_48.png in Resources */,
 				AD3682671B41A509007A6DD9 /* ComposeTweetViewController.xib in Resources */,
 				ADDBBF3B1B414CED004EA24E /* retweet_on.png in Resources */,
@@ -417,6 +443,7 @@
 				ADDBBF371B414CED004EA24E /* reply.png in Resources */,
 				AD3B52801B51437600D04144 /* bg5.jpg in Resources */,
 				ADDBBF341B414CED004EA24E /* favorite.png in Resources */,
+				AD3B528E1B516B2400D04144 /* ProfileCell.xib in Resources */,
 				ADDBBF241B41463F004EA24E /* TweetCell.xib in Resources */,
 				AD3B527F1B51437600D04144 /* bg4.jpg in Resources */,
 				AD0AAA701B40623600C7EB71 /* LoginViewController.xib in Resources */,
@@ -481,14 +508,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3B52851B516A9300D04144 /* ProfileViewController2.m in Sources */,
 				ADDBBF131B408949004EA24E /* User.m in Sources */,
 				AD0AAA6F1B40623600C7EB71 /* LoginViewController.m in Sources */,
+				AD3B52951B51781900D04144 /* StatusCell.m in Sources */,
 				ADDBBF441B41588D004EA24E /* Define.m in Sources */,
 				AD3682661B41A509007A6DD9 /* ComposeTweetViewController.m in Sources */,
 				AD1CE2231B4AEB7C00C0F10D /* MentionsController.m in Sources */,
 				AD0AAA731B4063F600C7EB71 /* TwitterClient.m in Sources */,
 				ADDBBF161B40895C004EA24E /* Tweet.m in Sources */,
 				AD7906941B4060B7008D470C /* AppDelegate.m in Sources */,
+				AD3B528D1B516B2400D04144 /* ProfileCell.m in Sources */,
 				AD1F10611B4AD0EB00C11080 /* MenuViewController.m in Sources */,
 				AD7906911B4060B7008D470C /* main.m in Sources */,
 				AD1CE21E1B4AE7EC00C0F10D /* ProfileViewController.m in Sources */,

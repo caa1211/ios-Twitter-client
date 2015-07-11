@@ -283,7 +283,7 @@ enum {
 }
 
 - (void) didUserSelected: (User *) user {
-    ProfileViewController *vc = [[ProfileViewController alloc]initWithUser:user andLoginUser: self.loginUser];
+    ProfileViewController2 *vc = [[ProfileViewController2 alloc]initWithUser:user andLoginUser: self.loginUser];
     UINavigationController *nvController = [[UINavigationController alloc]
                                             initWithRootViewController: vc];
     [self presentViewController:nvController animated:YES completion:nil];

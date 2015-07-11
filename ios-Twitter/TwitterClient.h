@@ -19,6 +19,9 @@
 
 -(void) homeTimelineWithParams:(NSDictionary *)params timelineType:(TIMELINE_TYPE)timelineType completion:(void(^)(NSArray *tweets, NSError *error))completion;
 
+-(void) userTimelineWithParams:(NSDictionary *)params completion:(void(^)(NSArray *tweets, NSError *error))completion;
+-(void) userProfileBannerWithParam:(NSDictionary *)params completion:(void(^)(NSDictionary *images, NSError *error))completion;
+
 -(void) postTweet:(NSString *)text completion: (void(^)(Tweet *tweet, NSError *error))completion;
 -(void) postRetweet:(NSString *)idStr completion: (void(^)(Tweet *tweet, NSError *error))completion;
 -(void) postDestroy:(NSString *)idStr completion: (void(^)(Tweet *tweet, NSError *error))completion;

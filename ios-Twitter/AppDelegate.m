@@ -30,7 +30,7 @@
     UIViewController *vc ;
     if (user != nil) {
        vc = [[TweetsViewController alloc] initWithUser:user];
-       //vc = [[ProfileViewController alloc] initWithUser:user];
+       //vc = [[ProfileViewController2 alloc] initWithUser:user];
     }else {
        NSLog(@"No logged in");
        vc = [[LoginViewController alloc]init];

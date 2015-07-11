@@ -60,7 +60,7 @@ typedef NS_ENUM(NSInteger, MenuItem) {
     
     switch (indexPath.row) {
         case Profile:
-            vc = [[ProfileViewController alloc] initWithUser:self.loginUser];
+            vc = [[ProfileViewController2 alloc] initWithUser:self.loginUser];
             break;
         case Timeline:
             vc = [[TweetsViewController alloc] initWithUser:self.loginUser andTimelineType:TIMELINE_TYPE_HOME];

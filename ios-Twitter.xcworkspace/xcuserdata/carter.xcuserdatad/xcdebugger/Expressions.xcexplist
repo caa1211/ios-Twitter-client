@@ -3,42 +3,69 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[TweetCell setTweet:]:TweetCell.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "user.screenname">
-            </PersistentString>
-            <PersistentString
-               value = "tweet.screenName">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[User initWithDictionary:]:User.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.screenname">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[TweetsViewController onUpdateTweet:]:TweetsViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "tweet.name">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "__31-[LoginViewController onLogin:]_block_invoke_2:LoginViewController.m">
       </ContextState>
       <ContextState
-         contextName = "-[TweetDetailViewController updateTweet:]:TweetDetailViewController.m">
+         contextName = "__34-[LoginViewController viewDidLoad]_block_invoke:LoginViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__23-[ProfileCell setUser:]_block_invoke:ProfileCell.m">
          <PersistentStrings>
             <PersistentString
-               value = "tweet.favoriteCount">
+               value = "error">
+            </PersistentString>
+            <PersistentString
+               value = "images">
+            </PersistentString>
+            <PersistentString
+               value = "images[@&quot;sizes&quot;][@&quot;mobile_retina&quot;][@&quot;url&quot;]">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__40-[TwitterClient postDestroy:completion:]_block_invoke147:TwitterClient.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Tweet initWithDictionary:]:Tweet.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "dictionary[@&quot;favorite_count&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__42-[TwitterClient postUnretweet:completion:]_block_invoke149:TwitterClient.m">
+      </ContextState>
+      <ContextState
+         contextName = "__44-[TwitterClient getRetweetsOfMe:completion:]_block_invoke:TwitterClient.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[TweetCell onRetweet]:TweetCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.tweet.retweeted_by_me">
+            </PersistentString>
+            <PersistentString
+               value = "self.tweet.idStr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__42-[TwitterClient postUnretweet:completion:]_block_invoke147:TwitterClient.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ProfileCell setUser:]:ProfileCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "user.profileBannerUrl">
+            </PersistentString>
+            <PersistentString
+               value = "user.profileImageUrl">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__51-[TwitterClient homeTimelineWithParams:completion:]_block_invoke104:TwitterClient.m">
       </ContextState>
       <ContextState
          contextName = "-[TweetCell assignTweet:]:TweetCell.m">
@@ -52,6 +79,52 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[ComposeTweetViewController textViewDidChange:]:ComposeTweetViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.tweetBtn.enabled">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TweetCell setTweet:]:TweetCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "user.screenname">
+            </PersistentString>
+            <PersistentString
+               value = "tweet.screenName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TweetsViewController onUpdateTweet:]:TweetsViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "tweet.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TweetDetailViewController updateTweet:]:TweetDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "tweet.favoriteCount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[User initWithDictionary:]:User.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.screenname">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__44-[TwitterClient getRetweetsOfMe:completion:]_block_invoke_2:TwitterClient.m">
+      </ContextState>
+      <ContextState
          contextName = "-[BDBOAuth1RequestOperationManager initWithBaseURL:consumerKey:consumerSecret:]:BDBOAuth1RequestOperationManager.m">
          <PersistentStrings>
             <PersistentString
@@ -63,60 +136,12 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__42-[TwitterClient postUnretweet:completion:]_block_invoke147:TwitterClient.m">
-      </ContextState>
-      <ContextState
-         contextName = "__44-[TwitterClient getRetweetsOfMe:completion:]_block_invoke_2:TwitterClient.m">
-      </ContextState>
-      <ContextState
-         contextName = "__34-[LoginViewController viewDidLoad]_block_invoke:LoginViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[Tweet initWithDictionary:]:Tweet.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "dictionary[@&quot;favorite_count&quot;]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[ComposeTweetViewController textViewDidChange:]:ComposeTweetViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.tweetBtn.enabled">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "__35-[TweetsViewController viewDidLoad]_block_invoke:TweetsViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "error.userInfo[@&quot;NSLocalizedDescription&quot;]">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[TweetCell onRetweet]:TweetCell.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.tweet.idStr">
-            </PersistentString>
-            <PersistentString
-               value = "self.tweet.retweeted_by_me">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__40-[TwitterClient postDestroy:completion:]_block_invoke147:TwitterClient.m">
-      </ContextState>
-      <ContextState
-         contextName = "__42-[TwitterClient postUnretweet:completion:]_block_invoke149:TwitterClient.m">
-      </ContextState>
-      <ContextState
-         contextName = "__51-[TwitterClient homeTimelineWithParams:completion:]_block_invoke104:TwitterClient.m">
-      </ContextState>
-      <ContextState
-         contextName = "__44-[TwitterClient getRetweetsOfMe:completion:]_block_invoke:TwitterClient.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

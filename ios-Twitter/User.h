@@ -17,6 +17,7 @@ extern NSString * const UserDidLogoutNotification;
 @property(nonatomic, strong) NSString *name;
 @property(nonatomic, strong) NSString *screenname;
 @property(nonatomic, strong) NSString *profileImageUrl;
+@property(nonatomic, strong) NSString *profileBannerUrl;
 @property(nonatomic, strong) NSString *tagline;
 @property(nonatomic, strong) NSString *idStr;
 @property (nonatomic, assign) NSInteger numTweets;
@@ -27,4 +28,5 @@ extern NSString * const UserDidLogoutNotification;
 + (User *) currentUser;
 + (void) setCurrentUser:(User *) currentUser;
 + (void) logout;
+
 @end
