@@ -63,7 +63,7 @@
     self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
     self.profileImage.clipsToBounds = YES;
     self.profileImage.layer.borderWidth = 2.0f;
-    self.profileImage.layer.borderColor = CGColorRetain([UIColor colorWithRed:0.335 green:0.632 blue:0.916 alpha:1.000].CGColor);
+    self.profileImage.layer.borderColor = CGColorRetain([UIColor whiteColor].CGColor);
     
     
     self.contentView.delegate = self;

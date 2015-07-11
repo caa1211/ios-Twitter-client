@@ -20,6 +20,12 @@
 		AD3682671B41A509007A6DD9 /* ComposeTweetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3682651B41A509007A6DD9 /* ComposeTweetViewController.xib */; };
 		AD36826F1B421D93007A6DD9 /* TweetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36826D1B421D93007A6DD9 /* TweetDetailViewController.m */; };
 		AD3682701B421D93007A6DD9 /* TweetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD36826E1B421D93007A6DD9 /* TweetDetailViewController.xib */; };
+		AD3B527C1B51437600D04144 /* bg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD3B52761B51437600D04144 /* bg1.jpg */; };
+		AD3B527D1B51437600D04144 /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD3B52771B51437600D04144 /* bg2.jpg */; };
+		AD3B527E1B51437600D04144 /* bg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD3B52781B51437600D04144 /* bg3.jpg */; };
+		AD3B527F1B51437600D04144 /* bg4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD3B52791B51437600D04144 /* bg4.jpg */; };
+		AD3B52801B51437600D04144 /* bg5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD3B527A1B51437600D04144 /* bg5.jpg */; };
+		AD3B52811B51437600D04144 /* bg6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD3B527B1B51437600D04144 /* bg6.jpg */; };
 		AD7906911B4060B7008D470C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7906901B4060B7008D470C /* main.m */; };
 		AD7906941B4060B7008D470C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7906931B4060B7008D470C /* AppDelegate.m */; };
 		AD79069C1B4060B7008D470C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD79069B1B4060B7008D470C /* Images.xcassets */; };
@@ -81,6 +87,12 @@
 		AD36826C1B421D93007A6DD9 /* TweetDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetDetailViewController.h; sourceTree = "<group>"; };
 		AD36826D1B421D93007A6DD9 /* TweetDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetDetailViewController.m; sourceTree = "<group>"; };
 		AD36826E1B421D93007A6DD9 /* TweetDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetDetailViewController.xib; sourceTree = "<group>"; };
+		AD3B52761B51437600D04144 /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1.jpg; sourceTree = "<group>"; };
+		AD3B52771B51437600D04144 /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
+		AD3B52781B51437600D04144 /* bg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg3.jpg; sourceTree = "<group>"; };
+		AD3B52791B51437600D04144 /* bg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg4.jpg; sourceTree = "<group>"; };
+		AD3B527A1B51437600D04144 /* bg5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg5.jpg; sourceTree = "<group>"; };
+		AD3B527B1B51437600D04144 /* bg6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg6.jpg; sourceTree = "<group>"; };
 		AD79068B1B4060B7008D470C /* ios-Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-Twitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD79068F1B4060B7008D470C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7906901B4060B7008D470C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -284,6 +296,12 @@
 				ADDBBF2C1B414CED004EA24E /* retweet_hover.png */,
 				ADDBBF2D1B414CED004EA24E /* retweet_on.png */,
 				ADDBBF2E1B414CED004EA24E /* Twitter_logo_blue_16.png */,
+				AD3B52761B51437600D04144 /* bg1.jpg */,
+				AD3B52771B51437600D04144 /* bg2.jpg */,
+				AD3B52781B51437600D04144 /* bg3.jpg */,
+				AD3B52791B51437600D04144 /* bg4.jpg */,
+				AD3B527A1B51437600D04144 /* bg5.jpg */,
+				AD3B527B1B51437600D04144 /* bg6.jpg */,
 				ADDBBF2F1B414CED004EA24E /* Twitter_logo_blue_32.png */,
 				ADDBBF301B414CED004EA24E /* Twitter_logo_blue_48.png */,
 				ADDBBF311B414CED004EA24E /* Twitter_logo_white_16.png */,
@@ -384,24 +402,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADDBBF3E1B414CED004EA24E /* Twitter_logo_blue_48.png in Resources */,
+				AD3B527D1B51437600D04144 /* bg2.jpg in Resources */,
 				ADDBBF1B1B40A8A1004EA24E /* TweetsViewController.xib in Resources */,
+				AD3B527E1B51437600D04144 /* bg3.jpg in Resources */,
 				ADDBBF3C1B414CED004EA24E /* Twitter_logo_blue_16.png in Resources */,
 				ADDBBF381B414CED004EA24E /* reply_hover.png in Resources */,
 				ADDBBF411B414CED004EA24E /* Twitter_logo_white_48.png in Resources */,
 				AD3682671B41A509007A6DD9 /* ComposeTweetViewController.xib in Resources */,
 				ADDBBF3B1B414CED004EA24E /* retweet_on.png in Resources */,
+				AD3B52811B51437600D04144 /* bg6.jpg in Resources */,
 				AD1F10621B4AD0EB00C11080 /* MenuViewController.xib in Resources */,
 				AD1CE2241B4AEB7C00C0F10D /* MentionsController.xib in Resources */,
 				AD3682701B421D93007A6DD9 /* TweetDetailViewController.xib in Resources */,
 				ADDBBF371B414CED004EA24E /* reply.png in Resources */,
+				AD3B52801B51437600D04144 /* bg5.jpg in Resources */,
 				ADDBBF341B414CED004EA24E /* favorite.png in Resources */,
 				ADDBBF241B41463F004EA24E /* TweetCell.xib in Resources */,
+				AD3B527F1B51437600D04144 /* bg4.jpg in Resources */,
 				AD0AAA701B40623600C7EB71 /* LoginViewController.xib in Resources */,
 				ADDBBF401B414CED004EA24E /* Twitter_logo_white_32.png in Resources */,
 				AD1CE21F1B4AE7EC00C0F10D /* ProfileViewController.xib in Resources */,
 				AD79069F1B4060B7008D470C /* LaunchScreen.xib in Resources */,
 				ADDBBF3A1B414CED004EA24E /* retweet_hover.png in Resources */,
 				ADDBBF3F1B414CED004EA24E /* Twitter_logo_white_16.png in Resources */,
+				AD3B527C1B51437600D04144 /* bg1.jpg in Resources */,
 				ADDBBF391B414CED004EA24E /* retweet.png in Resources */,
 				ADDBBF3D1B414CED004EA24E /* Twitter_logo_blue_32.png in Resources */,
 				ADDBBF351B414CED004EA24E /* favorite_hover.png in Resources */,
