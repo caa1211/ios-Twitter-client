@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *followersCountLabel;
 @property (strong, nonatomic) User *loginUser;
 @property (weak, nonatomic) IBOutlet UILabel *scrollTweetsCountLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 @property (strong, nonatomic) User *user;
 @end
 
@@ -42,6 +43,11 @@
         self.user = user;
     }
     return self;
+}
+
+- (IBAction)onPan:(UIPanGestureRecognizer *)sender {
+    
+    NSLog(@"========onPan===================");
 }
 
 - (void)viewDidLoad {
@@ -92,6 +98,13 @@
 {
     CGPoint contentOffset = CGPointMake(0.0, MIN(scrollView.contentOffset.y - 36.0, 42.0));
     [self.titleView setContentOffset:contentOffset];
+    NSLog(@"==================scrollView.contentOffset.y ====%f====", scrollView.contentOffset.y);
+    float scale = ((scrollView.contentOffset.y + 64) * -1)/100;
+    
+    if (scale > 0) {
+       self.bgImageView.transform = CGAffineTransformMakeScale(1.0 + scale , 1.0 +scale);
+    }
+    
 }
 
 - (void) onBack {
