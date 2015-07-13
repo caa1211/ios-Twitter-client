@@ -138,7 +138,6 @@
     CGPoint contentOffset = CGPointMake(0.0, MIN(scrollView.contentOffset.y - 36.0, 42.0));
     [self.titleView setContentOffset:contentOffset];
     
-    
     float scale = ((scrollView.contentOffset.y + 64) * -1)/100;
     
     UITableViewCell *profileCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
@@ -147,6 +146,7 @@
         ((ProfileCell *)profileCell).profileBackground.transform = CGAffineTransformMakeScale(1.0 + scale , 1.0 +scale);
     }
     
+     [((ProfileCell *)profileCell) setBlurEffect:scrollView.contentOffset.y];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -231,7 +231,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     if(indexPath.row == 0){
-        return 260;
+        return 460;
     }if(indexPath.row == 1){
         return 53;
     }else{

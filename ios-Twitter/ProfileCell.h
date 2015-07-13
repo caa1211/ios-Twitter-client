@@ -12,4 +12,5 @@
 @interface ProfileCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *profileBackground;
 -(void) setUser:(User *)user;
+-(void) setBlurEffect:(CGFloat) yOffset;
 @end

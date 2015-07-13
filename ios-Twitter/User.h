@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 
 extern NSString * const UserDidLoginNotification;
 extern NSString * const UserDidLogoutNotification;
@@ -17,7 +17,7 @@ extern NSString * const UserDidLogoutNotification;
 @property(nonatomic, strong) NSString *name;
 @property(nonatomic, strong) NSString *screenname;
 @property(nonatomic, strong) NSString *profileImageUrl;
-@property(nonatomic, strong) NSString *profileBannerUrl;
+@property(nonatomic,retain) UIImage *profileBannerImage;
 @property(nonatomic, strong) NSString *tagline;
 @property(nonatomic, strong) NSString *idStr;
 @property (nonatomic, assign) NSInteger numTweets;

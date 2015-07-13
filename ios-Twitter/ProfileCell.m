@@ -8,6 +8,7 @@
 
 #import "ProfileCell.h"
 #import "TwitterClient.h"
+#import "UIImage+ImageEffects.h"
 
 @interface ProfileCell()
 
@@ -20,6 +21,17 @@
 @end
 
 @implementation ProfileCell
+
+-(void) setBlurEffect:(CGFloat) yOffset {
+    if (yOffset < -64) {
+        CGFloat blurRadius = -1*(yOffset+64)/20;
+        CGFloat tintAlpha = MIN(-1*(yOffset+64)/800, 1);
+        self.profileBanner.image = [self.user.profileBannerImage applyBlurWithRadius:blurRadius tintColor:[UIColor colorWithWhite:0.97 alpha:tintAlpha] saturationDeltaFactor:1 maskImage:nil];
+    } else {
+        self.profileBanner.image = self.user.profileBannerImage;
+    }
+}
+
 
 -(void) setUser:(User *)user {
     _user = user;
@@ -40,8 +52,7 @@
     self.profileImage.layer.borderColor = CGColorRetain([UIColor whiteColor].CGColor);
     
     
-  
-    if ( user.profileBannerUrl == nil) {
+    if ( user.profileBannerImage == nil) {
     
         [[TwitterClient sharedInstance] userProfileBannerWithParam:@{@"user_id": user.idStr, @"screen_name": user.screenname} completion:^(NSDictionary *images, NSError *error) {
             if(images != nil){
@@ -57,19 +68,18 @@
                     fade.duration = 0.5f;
                     [self.profileImage.layer addAnimation:fade forKey:@"fade"];
                     
-                    [user setProfileBannerUrl:url];
+                    [user setProfileBannerImage:image];
 
                 } failure:nil];
             }
             
             else {
-                [user setProfileBannerUrl:@""];
+                //[user setProfileBannerImage:[[UIImage alloc]init]];
             }
         }];
         
     }else {
-        
-        [self.profileBanner setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:user.profileBannerUrl] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:3] placeholderImage:nil success: nil failure:nil];
+       self.profileBanner.image = user.profileBannerImage;
     }
 }
 

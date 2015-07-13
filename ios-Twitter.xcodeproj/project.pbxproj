@@ -32,6 +32,7 @@
 		AD3B528E1B516B2400D04144 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3B528C1B516B2400D04144 /* ProfileCell.xib */; };
 		AD3B52951B51781900D04144 /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3B52931B51781900D04144 /* StatusCell.m */; };
 		AD3B52961B51781900D04144 /* StatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3B52941B51781900D04144 /* StatusCell.xib */; };
+		AD3B529C1B537F2600D04144 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3B529B1B537F2600D04144 /* UIImage+ImageEffects.m */; };
 		AD7906911B4060B7008D470C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7906901B4060B7008D470C /* main.m */; };
 		AD7906941B4060B7008D470C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7906931B4060B7008D470C /* AppDelegate.m */; };
 		AD79069C1B4060B7008D470C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD79069B1B4060B7008D470C /* Images.xcassets */; };
@@ -108,6 +109,8 @@
 		AD3B52921B51781900D04144 /* StatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusCell.h; sourceTree = "<group>"; };
 		AD3B52931B51781900D04144 /* StatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusCell.m; sourceTree = "<group>"; };
 		AD3B52941B51781900D04144 /* StatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusCell.xib; sourceTree = "<group>"; };
+		AD3B529A1B537F2600D04144 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		AD3B529B1B537F2600D04144 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		AD79068B1B4060B7008D470C /* ios-Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-Twitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD79068F1B4060B7008D470C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7906901B4060B7008D470C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -293,6 +296,8 @@
 				AD1CE2211B4AEB7C00C0F10D /* MentionsController.m */,
 				AD1CE2221B4AEB7C00C0F10D /* MentionsController.xib */,
 				AD3B52821B516A9300D04144 /* ProfileViewController2.h */,
+				AD3B529A1B537F2600D04144 /* UIImage+ImageEffects.h */,
+				AD3B529B1B537F2600D04144 /* UIImage+ImageEffects.m */,
 				AD3B52831B516A9300D04144 /* ProfileViewController2.m */,
 				AD3B52841B516A9300D04144 /* ProfileViewController2.xib */,
 			);
@@ -522,6 +527,7 @@
 				AD1F10611B4AD0EB00C11080 /* MenuViewController.m in Sources */,
 				AD7906911B4060B7008D470C /* main.m in Sources */,
 				AD1CE21E1B4AE7EC00C0F10D /* ProfileViewController.m in Sources */,
+				AD3B529C1B537F2600D04144 /* UIImage+ImageEffects.m in Sources */,
 				AD36826F1B421D93007A6DD9 /* TweetDetailViewController.m in Sources */,
 				ADDBBF1A1B40A8A1004EA24E /* TweetsViewController.m in Sources */,
 				ADDBBF231B41463F004EA24E /* TweetCell.m in Sources */,
